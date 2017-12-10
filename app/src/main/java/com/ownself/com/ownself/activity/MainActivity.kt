@@ -14,6 +14,7 @@ class MainActivity : BaseActivity() {
 
     private var content: Fragment? = null
 
+    //회원 판단 기준
     private var user_login : Int = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
