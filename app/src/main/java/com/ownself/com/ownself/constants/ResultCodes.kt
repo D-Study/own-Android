@@ -5,5 +5,5 @@ package com.ownself.com.ownself.constants
  */
 
 object ResultCodes {
-    val SUCCESS = 1001
+    val SUCCESS = 1000
 }

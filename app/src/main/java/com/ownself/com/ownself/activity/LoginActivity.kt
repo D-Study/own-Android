@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.ownself.com.ownself.R
+import com.ownself.com.ownself.constants.RequestCodes
 import com.ownself.com.ownself.constants.ResultCodes
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.toast
@@ -22,8 +23,12 @@ class LoginActivity : BaseActivity() {
         setContentView(R.layout.activity_login)
 
 
-        val loginButton = btn_signin
-        loginButton.setOnClickListener { view -> getData()}
+        val btn_signIn = btn_signin
+        btn_signIn.setOnClickListener { v -> getData()}
+
+        val btn_signUp = btn_signup
+        btn_signUp.setOnClickListener { v -> startActivityForResult(
+                SignUpActivity.newIntent(this), RequestCodes.SIGN_UP) }
 
     }
 
@@ -39,6 +44,20 @@ class LoginActivity : BaseActivity() {
 
         setResult(ResultCodes.SUCCESS)
         finish()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        requestCodes(requestCode, resultCode)
+    }
+
+    private fun requestCodes(requestCode: Int, resultCode: Int) {
+        when(requestCode){
+            RequestCodes.SIGN_UP ->
+                when(resultCode){
+                    ResultCodes.SUCCESS -> toast("회원가입 완료") // setResult(resultCode) / finish()
+
+                }
+        }
     }
 
     companion object {

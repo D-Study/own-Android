@@ -6,4 +6,5 @@ package com.ownself.com.ownself.constants
 
 object RequestCodes {
     val SIGN_IN = 1000
+    val SIGN_UP = 1001
 }
