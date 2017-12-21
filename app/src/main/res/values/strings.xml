@@ -2,4 +2,16 @@
     <string name="app_name">Ownself</string>
     <string name="login_email">Input Email</string>
     <string name="login_pwd">Input Password</string>
+    <string name="ownself">OWNSELF</string>
+    <string name="txt01">OWN\nSELF</string>
+    <string name="txt02">SELF</string>
+    <string name="register">Register</string>
+    <string name="login_text01">Don’t have an account? Create your accounts.\nIt takes less than a minute</string>
+    <string name="longin_name_hint01">Username</string>
+    <string name="longin_email_hint">Email</string>
+    <string name="longin_password_hint">Password</string>
+    <string name="longin_password_confirm_hint">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="start_text02">24시간을 알차게 보낼 수 있다면 얼마나 좋을까?</string>
+    <string name="start_text03">목표는 크게 계획은 작게\n작은 계획을 하나하나 이루다보면\n어느덧 큰 목표를 이루는 당신을 보게 될 것이다.</string>
 </resources>

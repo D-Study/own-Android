@@ -2,11 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#600017"
+    android:background="#bababa"
     >
 
 
-    <ScrollView
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/test_round"
+        android:text="일별"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+    <TextView
+        android:id="@+id/b"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/a"
+        android:background="@drawable/test_round"
+        android:text="일별"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+    <TextView
+        android:layout_below="@+id/b"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/test_round"
+        android:text="일별"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+
+
+
+
+
+    <!--<ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -164,7 +199,7 @@
 
 
     </ScrollView>
-
+-->
 
 
 </RelativeLayout>
