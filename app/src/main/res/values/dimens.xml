@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="motion_translation_y">200dp</dimen>
+    <dimen name="toolbar">48dp</dimen>
 </resources>

@@ -8,5 +8,11 @@ import io.realm.annotations.RealmClass
 /**
  * Created by mac on 2017. 12. 11..
  */
-@RealmClass
-open class FirstMeet(var id: Int = 0, var firtstmeet: Int? = 0) : RealmModel
+open class FirstMeet: RealmObject() {
+
+    @PrimaryKey
+    open var id: Int = 0
+
+    open var name: String? = null
+    open var email: String? = null
+}

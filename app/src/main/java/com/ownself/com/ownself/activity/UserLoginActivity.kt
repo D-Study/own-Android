@@ -1,8 +1,10 @@
 package com.ownself.com.ownself.activity
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.ScaleAnimation
@@ -35,7 +37,7 @@ import com.ifttt.sparklemotion.animations.AlphaAnimation
 /**
  * Created by mac on 2017. 12. 21..
  */
-class UserLoginActivity : BaseActivity() {
+class UserLoginActivity : Activity() {
 
 
 
@@ -66,6 +68,9 @@ class UserLoginActivity : BaseActivity() {
 
 
         sparkle_view.getViewPager().setAdapter(PagerAdapter())
+
+        Handler().postDelayed(Runnable {
+            kotlin.run { sparkle_view.getViewPager().setCurrentItem(1, true) } }, 2000)
 
 
     }
@@ -120,18 +125,19 @@ class UserLoginActivity : BaseActivity() {
         private fun buildDecorForPage0(parent: SparkleViewPagerLayout, sparkMotion: SparkleMotion) {
 
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.layout_start, parent, false)
-        val decor : Decor = Decor.Builder(view).setPage(Page.pageRange(0, 4)).behindViewPage().withLayer().build()
+        val decor : Decor = Decor.Builder(view).setPage(Page.pageRange(0, 2)).behindViewPage().withLayer().build()
 
-            var motionTranslateY : Float = resources.getDimension(R.dimen.motion_translation_y)
-            sparkMotion.animate(RotationAnimation(Page.singlePage(0), 0f, -90f)).on(decor)
-            sparkMotion.animate(
-                    TranslationAnimation(Page.singlePage(0), 0f, 0f, 0f, motionTranslateY, false)).on(decor)
-            sparkMotion.animate(AlphaAnimation(Page.singlePage(0), 1f, 0f)).on(decor)
+            sparkMotion.animate(AlphaAnimation(Page.pageRange(0,2), 1f, 0f)).on(decor)
 
     }
 
-
     private fun buildDecorForPage1(parent: SparkleViewPagerLayout, sparkMotion: SparkleMotion) {
+
+        /*val view : View = LayoutInflater.from(parent.context).inflate(R.layout.layout_second, parent, false)
+        val decor2 : Decor = Decor.Builder(view).setPage(Page.pageRange(0, 4)).behindViewPage().withLayer().build()
+
+        sparkMotion.animate(AlphaAnimation(Page.singlePage(1), 0f, 1f)).on(decor2)
+*/
 
     }
 
